@@ -33,6 +33,7 @@ for i in cd:#проходим массив cd, i = достоинству кар
              if cd[j] == combo[3]:
                  nomeraseta.append(j)
 
+
      if count == 4:
          combo[2] = [combo[1], i]
 
@@ -44,7 +45,7 @@ for i in cm:
         combo[5] = i
 #стрит
 for p in itertools.permutations(cd):
-    for j in range(6):
+    for j in range(12):
         if ((p[0] == j) and (p[1] == j+1) and (p[2] == j+2) and (p[3] == j+3) and (p[4] == j+4)):
             #print(p)
             combo[4] = 1
