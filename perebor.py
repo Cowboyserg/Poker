@@ -1,10 +1,8 @@
-import itertools
-i=1
-mas = [None, None, None]
-a = 1
-b = 2
-c = 3
-while i <= 3:
-    mas.append(a)
-    i+=1
-print(mas)
+
+cd = [6, 3, 10, 1, 5, 10, 10]
+neset = []
+combo = 10
+for i in range(len(cd)):
+    if cd[i] != combo:
+        neset.append(cd[i])
+print(neset)

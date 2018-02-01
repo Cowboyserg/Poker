@@ -23,6 +23,7 @@ nomeraseta = []
 #Четвертый раз проходим, parax2 = 4, count = 2
 combo = {0:None,1:None,2:[None,None],3:None,4:None,5:None,6:[None,None],7:None,8:None,9:None}
 #0:старшая карта 1:пара 2:две пары 3:сет 4:стрит 5:флеш 6:фулл хаус 7:каре 8:стрит флеш 9:флеш рояль
+a=1
 for i in cd:#проходим массив cd, i = достоинству карты, проходим его количество элементов раз
      count=cd.count(i)# количество повторений данного достоинства
      if count == 2:#пара
@@ -33,11 +34,23 @@ for i in cd:#проходим массив cd, i = достоинству кар
              if cd[j] == combo[3]:
                  nomeraseta.append(j)
 
-
      if count == 4:
          combo[2] = [combo[1], i]
 
-print("Сет под номерами :", nomeraseta)
+print("nomeraseta: ",nomeraseta)
+
+nomeraneseta = []
+neset = []
+#Фулл хаус
+for i in range(len(cd)):
+    if cd[i] != combo[3]:
+        neset.append(cd[i])
+for i in neset:
+    count = neset.count(i)
+    if count == 2:
+        combo[6] = [combo[3], i]
+print("nomeraneseta: ", nomeraneseta)
+
 #Флеш
 for i in cm:
     count = cm.count(i)
